@@ -232,17 +232,20 @@ h6 {
   .navmenu {
     padding: 0;
     /*background-color: red;*/
-    margin-left: 44%;
-  }
+    margin-left: auto;
+    }
 
-  .header-container {
+   .header-container {
     display: flex;
-    align-items: right;
+    align-items: center;
+    justify-content: space-between; /* Ensures elements are evenly spaced */
+    flex-wrap: nowrap; /* Prevent wrapping of items */
   }
 
   .navmenu ul {
     display: flex;
-    list-style: none; /* Remove bullet points */
+    flex-direction: row; /* Ensure horizontal alignment */
+    list-style: none;
     padding: 0;
     margin: 0;
     justify-content: flex-end;
@@ -269,6 +272,7 @@ h6 {
     color: var(--nav-color);
     padding: 18px 15px;
     font-size: 16px;
+    white-space: nowrap; /* Prevent text wrapping */
     font-family: var(--nav-font);
     font-weight: 400;
     display: flex;
@@ -316,18 +320,20 @@ h6 {
     transition: color 0.3s;
   }
 
-  .navmenu {
-    padding: 0;
-    z-index: 9997;
-    margin: 0;
-  }
-
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensure items stay aligned */
+    flex-wrap: nowrap; /* Prevent items from stacking vertically */
+    position: relative; /* Positioning for dropdowns */
+  }  
   .navmenu ul {
     display: flex;
+    flex-direction: row; /* Ensure horizontal alignment */
     list-style: none;
-    position: absolute;
-    inset: 60px 20px 20px 20px;
     padding: 0;
+    margin: 0;
+    justify-content: flex-end;
     margin-right: 2rem;
     border-radius: 6px;
     background-color: var(--nav-mobile-background-color);
